@@ -4,7 +4,6 @@ const translations = {
     geo: { "Register":"რეგისტრაცია", "Login":"შესვლა", "Blog":"ბლოგი", "Contact Us":"კონტაქტი", "About Us":"ჩვენს შესახებ", "Welcome to PointVerite, it's under construction...":"კეთილი იყოს თქვენი მობრძანება PointVerite-ში, მიმდინარე ეტაპზეა..." }
 };
 
-// Load language from localStorage or default to English
 let currentLang = localStorage.getItem("siteLang") || "en";
 
 function setLanguage(lang) {
@@ -15,7 +14,7 @@ function setLanguage(lang) {
         }
     });
     currentLang = lang;
-    localStorage.setItem("siteLang", lang); // save choice
+    localStorage.setItem("siteLang", lang);
     highlightSelectedLang(lang);
 }
 
@@ -30,19 +29,16 @@ function highlightSelectedLang(lang) {
     });
 }
 
-// Attach click to flag icons
 document.querySelectorAll(".img1").forEach(icon => {
     icon.addEventListener("click", (e) => {
-        e.preventDefault(); // just in case
+        e.preventDefault();
         const lang = icon.getAttribute("data-lang");
         setLanguage(lang);
     });
 });
 
-// Prevent menu links from reloading page
 document.querySelectorAll(".li1 a").forEach(link => {
     link.addEventListener("click", e => e.preventDefault());
 });
 
-// Set initial language when page loads
 setLanguage(currentLang);
