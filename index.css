@@ -34,17 +34,15 @@ html{
 }
 
 
-.lang-btns {
+.li2 {
     display: flex;
     gap: 10px;
     align-items: center;
 }
-
-.lang-icon {
+.img1 {
     cursor: pointer;
     transition: transform 0.2s;
 }
-
-.lang-icon:hover {
+.img1:hover {
     transform: scale(1.2);
 }
