@@ -27,3 +27,24 @@ html{
     color: blue;
     transition: 1s;
 }
+.div2 h1 {
+    text-align: center;
+    color: black;
+    color: aliceblue;
+}
+
+
+.lang-btns {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.lang-icon {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.lang-icon:hover {
+    transform: scale(1.2);
+}
